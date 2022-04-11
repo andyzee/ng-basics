@@ -1,0 +1,18 @@
+<div class="card">
+  <h2>{{ title }}</h2>
+  <p>{{ text }}</p>
+
+  <div class="buttons">
+    <button (click)="changeTitle()">Change title</button>
+    <button (click)="title = 'Change title inline'">Change title inline</button>
+  </div>
+
+  <!-- <div>
+    <input type="text" #myInput (input)="inputHandler(myInput.value)" [value]="title">
+  </div> -->
+
+  <div>
+    <input type="text" [(ngModel)]="title" (ngModelChange)="changeHandler()">
+  </div>
+
+</div>
